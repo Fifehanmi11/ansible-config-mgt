@@ -17,5 +17,27 @@ pipeline {
         }
       }
     }
+    stage('Package') {
+      steps {
+        script {
+          sh 'echo "packaging stage"'
+        }
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        script {
+          sh 'echo "Deploting Stage"'
+        }
+      }
+    }
+    stage('Cleaning') {
+      steps {
+        script {
+          sh 'echo "Cleaning up Stage"'
+        }
+      }
+    }
     }
 }
